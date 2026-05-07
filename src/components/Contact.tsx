@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
 
 interface ContactProps {
