@@ -220,7 +220,7 @@
   100% { transform: scale(1.6); opacity: 0; }
 }
 
-.root: {
+:root {
   --c-text: #000000;
 }
 
