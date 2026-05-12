@@ -72,6 +72,10 @@
 /* Skill Wrapper for Rotation */
 .skill-circle-wrapper {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -55px; /* half of 110px */
+  margin-left: -55px; /* half of 110px */
   --radius: 190px;
   width: 110px;
   height: 110px;
@@ -146,6 +150,10 @@
 /* Center Piece */
 .skills-center-orbit {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px; /* half of 140px */
+  margin-left: -70px; /* half of 140px */
   width: 140px;
   height: 140px;
   display: flex;
@@ -292,6 +300,8 @@
     --radius: 130px;
     width: 80px;
     height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
   }
 
   .skill-circle {
@@ -311,6 +321,8 @@
   .skills-center-orbit {
     width: 100px;
     height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
   }
 
   .core-text { font-size: 1rem; }
@@ -327,6 +339,8 @@
     --radius: 100px;
     width: 65px;
     height: 65px;
+    margin-top: -32.5px;
+    margin-left: -32.5px;
   }
 
   .skill-circle {
@@ -348,6 +362,8 @@
   .skills-center-orbit {
     width: 80px;
     height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
   }
 
   .core-text { font-size: 0.85rem; }
