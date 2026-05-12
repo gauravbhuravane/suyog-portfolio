@@ -167,10 +167,6 @@ export const Skills: React.FC<SkillsProps> = ({ theme }) => {
                     <li key={j} className="skill-item">
                       <div className="skill-item-header">
                         <span>{item.name}</span>
-                        <span className="skill-percent">{item.level}%</span>
-                      </div>
-                      <div className="skill-progress">
-                        <div className="skill-progress-fill" style={{ width: `${item.level}%` }} />
                       </div>
                     </li>
                   ))}

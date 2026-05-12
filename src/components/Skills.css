@@ -164,7 +164,18 @@
   justify-content: center;
   align-items: center;
   border: 2px dashed rgba(255, 255, 255, 0.2);
-  animation: pulseRotate 10s linear infinite;
+  /* Removed pulseRotate from here to keep text upright */
+}
+
+/* Added a rotating border element style to keep text upright */
+.orbit-core::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px dashed var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: pulseRotate 15s linear infinite;
 }
 
 .core-text {
@@ -308,11 +319,46 @@
 
 @media (max-width: 480px) {
   .skills-stage {
-    height: 350px;
+    height: 320px;
+    margin-bottom: 2rem;
   }
+
+  .skill-circle-wrapper {
+    --radius: 100px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .skill-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .skill-circle img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 2px;
+  }
+
+  .skill-circle span {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .skills-center-orbit {
+    width: 80px;
+    height: 80px;
+  }
+
+  .core-text { font-size: 0.85rem; }
+  .core-sub { font-size: 0.5rem; }
 
   .skill-box {
     padding: 1rem;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
   }
 }
 
@@ -322,75 +368,24 @@
 
 /* The row */
 .skill-item {
-  margin-bottom: 18px;
-  padding: 2px 0;
+  margin-bottom: 12px;
+  padding: 4px 0;
+  text-align: center;
 }
 
-/* Skill name + percentage */
+/* Skill name */
 .skill-item-header {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.95rem;
+  justify-content: center;
+  font-size: 1rem;
   font-weight: 500;
-  opacity: 0.9;
-  margin-bottom: 6px;
-}
-
-/* Percentage */
-.skill-percent {
-  font-weight: 700;
-  background: var(--skill-text-grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Track */
-.skill-progress {
-  position: relative;
-  width: 100%;
-  height: 12px;
-  /* Bigger for premium look */
-  background: var(--skill-track);
-  border-radius: 999px;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-/* Fill */
-.skill-progress-fill {
-  height: 100%;
-  width: 0%;
-  border-radius: 999px;
-  background: var(--skill-fill);
-  background-size: 300% 100%;
-  animation: shine 3s linear infinite;
-  transition: width 1.2s cubic-bezier(0.17, 0.67, 0.45, 1.5);
-  box-shadow:
-    0 0 12px var(--skill-glow),
-    0 0 25px var(--skill-glow);
-}
-
-/* Striped shine effect */
-@keyframes shine {
-  0% {
-    background-position: 0% 0;
-  }
-
-  100% {
-    background-position: 300% 0;
-  }
+  opacity: 0.95;
 }
 
 :root {
-  --skill-track: #e5e7eb;
-  --skill-fill: linear-gradient(90deg, #2563eb, #22d3ee, #0ea5e9, #2563eb);
-  --skill-glow: #38bdf8;
   --skill-text-grad: linear-gradient(90deg, #2563eb, #0ea5e9);
 }
 
 .dark {
-  --skill-track: rgba(255, 255, 255, 0.08);
-  --skill-fill: linear-gradient(90deg, #7c3aed, #4f46e5, #06b6d4, #7c3aed);
-  --skill-glow: #8b5cf6;
   --skill-text-grad: linear-gradient(90deg, #c084fc, #818cf8);
 }

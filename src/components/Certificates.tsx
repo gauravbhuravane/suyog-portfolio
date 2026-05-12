@@ -11,9 +11,9 @@ interface Cert {
 
 const CERTS: Record<string, Cert[]> = {
   tech: [
-    { title: "LogicMonitor Certified Professional", org: "LogicMonitor", date: "Recent", img: "/certs/logicmonitor.png" },
-    { title: "AWS Certified Cloud Practitioner", org: "AWS", date: "Recent", img: "/certs/aws.png" },
-    { title: "Infosys Certified Cloud Practitioner", org: "Infosys", date: "Recent", img: "/certs/infosys.png" },
+    { title: "LogicMonitor Certified Professional", org: "LogicMonitor", date: "Recent", img: "/IMG-20260511-WA0001.jpg" },
+    { title: "Infosys Certified AWS Cloud Practitioner", org: "AWS", date: "Recent", img: "/Infosys Certified AWS Cloud Practitioner.jpg" },
+    { title: "Infosys Certified Cloud Beginner", org: "Infosys", date: "Recent", img: "/Infosys Certified Cloud Beginner.jpg" },
   ],
   other: [],
 };

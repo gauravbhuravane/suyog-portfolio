@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { color, motion } from "framer-motion";
+import { color, motion, Variants } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import "./Home.css";
 
@@ -18,7 +18,7 @@ interface HeroProps {
 export function Home({ theme }: HeroProps) {
   const roles = [
     "Systems Engineer",
-    "Cloud Enthusiast",
+    "Cloud Engineer",
     "Production Support Engineer",
     "AWS Practitioner",
     "Problem Solver",
@@ -35,7 +35,7 @@ export function Home({ theme }: HeroProps) {
   ];
 
   const [typedRoles, setTypedRoles] = useState("");
-  const rolesText = "Systems Engineer | Cloud Explorer | Problem Solver";
+  const rolesText = "Systems Engineer | Cloud Engineer";
 
   useEffect(() => {
     let i = 0;
@@ -47,12 +47,12 @@ export function Home({ theme }: HeroProps) {
     return () => clearInterval(interval);
   }, []);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2, when: "beforeChildren" } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80 } },
   };

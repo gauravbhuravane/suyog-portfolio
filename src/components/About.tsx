@@ -68,7 +68,7 @@ export function About() {
               const el = document.querySelector(".whoami-title");
               el?.classList.add("type");
             }, 600);
-          }, 300); 
+          }, 300);
         }
       },
       { threshold: 0.2 }
@@ -102,7 +102,7 @@ export function About() {
   /* ===== COUNTERS ===== */
   const counters = [
     { icon: Code, label: "Projects Completed", value: 5 },
-    { icon: Timer, label: "Years Experience", value: 1 },
+    { icon: Timer, label: "Years Experience", value: 2 },
     { icon: Cpu, label: "Technologies Mastered", value: 10 },
     { icon: Trophy, label: "Certifications", value: 3 },
   ];
@@ -130,8 +130,8 @@ export function About() {
   /* ===== IMAGE + TEXT ===== */
   const getImageWidth = () =>
     scrollProgress < 0.4 ? 100 :
-    scrollProgress < 0.6 ? 100 - ((scrollProgress - 0.4) / 0.2) * 50 :
-    50;
+      scrollProgress < 0.6 ? 100 - ((scrollProgress - 0.4) / 0.2) * 50 :
+        50;
 
   const NAVBAR_HEIGHT = 80;
 
@@ -142,8 +142,8 @@ export function About() {
 
   const getTextOpacity = () =>
     scrollProgress < 0.4 ? 0 :
-    scrollProgress < 0.6 ? (scrollProgress - 0.4) / 0.2 :
-    1;
+      scrollProgress < 0.6 ? (scrollProgress - 0.4) / 0.2 :
+        1;
 
   return (
     <section id="about" className="about-wrapper">
@@ -191,7 +191,7 @@ export function About() {
               </p>
 
               <p>
-                Equipped with hands-on experience in monitoring tools like LogicMonitor and production support environments at Infosys Ltd. 
+                Equipped with hands-on experience in monitoring tools like LogicMonitor and production support environments at Infosys Ltd.
                 I am skilled in AWS, SQL, and Python, always striving to improve monitoring efficiency.
               </p>
 
