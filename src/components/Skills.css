@@ -74,16 +74,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -55px; /* half of 110px */
-  margin-left: -55px; /* half of 110px */
   --radius: 190px;
   width: 110px;
   height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Circular movement logic */
-  transform: rotate(calc(360deg / var(--total) * var(--i))) 
+  /* Circular movement logic - added translate(-50%, -50%) for perfect centering */
+  transform: translate(-50%, -50%) 
+             rotate(calc(360deg / var(--total) * var(--i))) 
              translateY(calc(-1 * var(--radius))) 
              rotate(calc(-360deg / var(--total) * var(--i)));
   animation: circulate 25s linear infinite;
@@ -91,12 +90,14 @@
 
 @keyframes circulate {
   from {
-    transform: rotate(calc(360deg / var(--total) * var(--i))) 
+    transform: translate(-50%, -50%) 
+               rotate(calc(360deg / var(--total) * var(--i))) 
                translateY(calc(-1 * var(--radius))) 
                rotate(calc(-360deg / var(--total) * var(--i)));
   }
   to {
-    transform: rotate(calc(360deg / var(--total) * var(--i) + 360deg)) 
+    transform: translate(-50%, -50%) 
+               rotate(calc(360deg / var(--total) * var(--i) + 360deg)) 
                translateY(calc(-1 * var(--radius))) 
                rotate(calc(-360deg / var(--total) * var(--i) - 360deg));
   }
@@ -152,8 +153,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -70px; /* half of 140px */
-  margin-left: -70px; /* half of 140px */
+  transform: translate(-50%, -50%);
   width: 140px;
   height: 140px;
   display: flex;
@@ -300,8 +300,6 @@
     --radius: 130px;
     width: 80px;
     height: 80px;
-    margin-top: -40px;
-    margin-left: -40px;
   }
 
   .skill-circle {
@@ -321,8 +319,6 @@
   .skills-center-orbit {
     width: 100px;
     height: 100px;
-    margin-top: -50px;
-    margin-left: -50px;
   }
 
   .core-text { font-size: 1rem; }
@@ -339,8 +335,6 @@
     --radius: 100px;
     width: 65px;
     height: 65px;
-    margin-top: -32.5px;
-    margin-left: -32.5px;
   }
 
   .skill-circle {
@@ -362,8 +356,6 @@
   .skills-center-orbit {
     width: 80px;
     height: 80px;
-    margin-top: -40px;
-    margin-left: -40px;
   }
 
   .core-text { font-size: 0.85rem; }
